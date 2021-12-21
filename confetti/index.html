@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <h2>
+            CONFETTI FALLING
+        </h2>
+
+        <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium ullam atque repellendus eligendi
+            veritatis nesciunt velit cumque animi amet, commodi ratione, aliquid voluptatum ut voluptas natus possimus
+            consequuntur non dolores quia? Voluptatum, tempore quam? Officia placeat voluptatem ipsa error obcaecati vel
+            quidem vitae aut! Libero, ratione? Qui nobis quidem quasi illum. Nobis perferendis nihil corrupti recusandae
+            laudantium atque aspernatur, placeat iure delectus perspiciatis? Quia sequi repellendus, blanditiis
+            perspiciatis debitis tenetur doloribus placeat sit deleniti quam fuga tempora sapiente ab odio unde
+            veritatis praesentium. Accusamus sapiente id doloremque, vel maxime repudiandae minima non iste itaque saepe
+            voluptas excepturi explicabo temporibus obcaecati quasi optio quae, autem cupiditate et deserunt! Odit, odio
+            dolorum! Tempora ad esse illo atque, et incidunt repellendus accusamus quisquam porro ab ut sequi architecto
+            corrupti magnam quia ducimus reprehenderit cupiditate assumenda laboriosam eligendi itaque, dolores nulla
+            rem impedit. Numquam obcaecati autem sint, ducimus porro provident, libero praesentium dolores ad nam ut,
+            blanditiis illo facere perferendis aperiam magnam aut sequi molestias beatae! Fugiat, dolores id. Tenetur
+            facere laborum, amet et fugiat neque aliquid pariatur, repellendus doloremque laudantium nostrum, quo aut
+            unde asperiores? Aliquid, suscipit, optio maiores, quaerat illum accusantium natus ut ea cum dolore
+            voluptates nemo recusandae? Atque, illo dicta.</P>
+        <button href="#" class="btn"> Click Here</button>
+        <div class="popup">
+            <h2>Your content goes here........</h2>
+            <b class="close">X</b>
+
+
+        </div>
+    </section>
+
+    <canvas id="my-canvas"></canvas>
+
+    <script src="index.min.js"></script>
+
+    <script>
+        let btn = document.querySelector('.btn');
+        let popup = document.querySelector('.popup');
+        let clo = document.querySelector('.close');
+        let confe = document.querySelector('#my-canvas');
+
+        
+        btn.onclick = function () {
+            popup.classList.add('active');
+            confe.classList.add('active');
+
+        }
+
+        clo.onclick = function () {
+            popup.classList.remove('active');
+            confe.classList.remove('active');
+
+        }
+
+        var confettiSettings = { target: 'my-canvas' };
+        var confetti = new ConfettiGenerator(confettiSettings);
+        confetti.render();
+
+
+
+    </script>
+</body>
+
+</html>

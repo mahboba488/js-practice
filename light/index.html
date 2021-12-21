@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="img">
+        <img src="lightoff.png" alt="off" id ="myimage" style =" width:570px;" >
+
+    </div>
+    <div class="text">
+        <h1>BUTTON <br>
+            OFF
+        </h1>
+
+        <BUtton class="btn" onclick="demo()">Turn on</BUtton>
+        <br> <br>
+        <button class="btn1" onclick="demo1()">Turn off</button>
+
+    </div>
+
+    <script>
+        function demo(){
+            document.getElementById("myimage").src="lighton.png";
+        }
+
+        function demo1(){
+            document.getElementById("myimage").src="lightoff.png"
+        }
+    </script>
+</body>
+</html>
