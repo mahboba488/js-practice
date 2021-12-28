@@ -77,36 +77,7 @@ function addTodo(event){
    }
 
 
-   function filterTodo(e){
-
-    const todos = todoList.childNodes;
-    todos.forEach(function(todo){
-
-        switch (e.target.value){
-            case "all":
-                break;
-
-            case "completed":
-                
-                if(todo.classList.contains('completed')){
-                    todo.style.display = 'flex';
-
-
-
-                }else{
-                    todo.style.display="none";
-                }
-
-
-        }
-
-    });
-   
-
- 
-
-
-   }
+  
 
 
 
