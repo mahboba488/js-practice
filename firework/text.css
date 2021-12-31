@@ -1,20 +1,15 @@
-body, html{
-	margin: 0px;
-	height: 100%;
-	overflow-y: hidden;
-}
-
-.pera{
-   
+body{
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10vh;
+    height: 100vh;
     background: #000;
     
 }
 
-.pera p{
+p{
     position: relative;
     font-family: sans-serif;
     color: #fff;
@@ -41,4 +36,4 @@ body, html{
         background-position: 500%;
         
     }
-} 
+}
