@@ -9,6 +9,17 @@
   <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
   <!-- main css -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!--default color skin-->
+  <link rel="stylesheet" href="css/skins/color-1.css">
+
+  <!--style switcher - for demo purposes only-->
+  <link rel="stylesheet"  type ="text/css" class ="alternate-style" title ="color-1" href="css/skins/color-1.css" disabled>
+  <link rel="stylesheet"  type ="text/css" class ="alternate-style" title ="color-2" href="css/skins/color-2.css" disabled>
+  <link rel="stylesheet"  type ="text/css" class ="alternate-style" title ="color-3" href="css/skins/color-3.css" disabled>
+  <link rel="stylesheet"  type ="text/css" class ="alternate-style" title ="color-4" href="css/skins/color-4.css" disabled>
+  <link rel="stylesheet"  type ="text/css" class ="alternate-style" title ="color-5" href="css/skins/color-5.css" >
+
+  <link rel="stylesheet" href="css/style-switcher.css">
 </head>
 
 <body>
@@ -37,12 +48,13 @@
     <div class="colse-nav-menu outer-shadow hover-in-shadow">&times;</div>
     <div class="nav-menu-inner">
       <ul>
-        <li><a href="#home" class=" link-item inner-shadow active"> home</a></li>
-        <li><a href="#about" class=" link-item outer-shadow hover-in-shadow "> about</a></li>
-        <li><a href="#services" class=" link-item outer-shadow hover-in-shadow "> services</a></li>
-        <li><a href="#portfolio" class=" link-item outer-shadow hover-in-shadow "> portfolio</a></li>
-        <li><a href="#testimonial" class=" link-item outer-shadow hover-in-shadow"> testimonial</a></li>
-        <li><a href="#contact" class=" link-item outer-shadow hover-in-shadow "> contact</a></li>
+        
+        <li><a href="#home" class=" link-item inner-shadow active">home</a></li>
+        <li><a href="#about" class=" link-item outer-shadow hover-in-shadow ">about</a></li>
+        <li><a href="#services" class=" link-item outer-shadow hover-in-shadow ">services</a></li>
+        <li><a href="#portfolio" class=" link-item outer-shadow hover-in-shadow ">portfolio</a></li>
+        <li><a href="#testimonial" class=" link-item outer-shadow hover-in-shadow">testimonial</a></li>
+        <li><a href="#contact" class=" link-item outer-shadow hover-in-shadow ">contact</a></li>
 
 
 
@@ -61,7 +73,7 @@
   <!-------------------navigation menu end---------------->
 
   <!-------------------Home section start---------------->
-  <section class="home-section section" id="home">
+  <section class="home-section section active" id="home">
 
     <!--effect wrap start-->
     <div class="effect-wrap">
@@ -134,7 +146,8 @@
           <p>Hello</p>
           <h2>I'm webShala</h2>
           <h1>Web Designer & Developer</h1>
-          <a href="#about" class=" link-item btn1 outer-shadow hover-in-shadow ">More About Me </a>
+          <a href="#about" class=" btn1 outer-shadow hover-in-shadow  "> More About Me</a>
+          
 
         </div>
         <div class="home-img ">
@@ -149,6 +162,34 @@
 
   </section>
   <!-------------------Home section end---------------->
+
+
+   <!--style switcher start - for demo purposes only-->
+
+   <div class="style-switcher outer-shadow">
+
+    <div class="style-switcher-toggler s-icon outer-shadow hover-in-shadow">
+      <i class="fas fa-cog fa-spin"></i>
+    </div>
+    <div class="day-night s-icon outer-shadow hover-in-shadow">
+      <i class="fas fa-moon"></i>
+    </div>
+
+    <h4>Theme Colors</h4>
+    <div class="colors">
+      <span class="color-1" onclick="setActivestyle('color-1')"></span>
+      <span class="color-2" onclick="setActivestyle('color-2')"></span>
+      <span class="color-3" onclick="setActivestyle('color-3')"></span>
+      <span class="color-4" onclick="setActivestyle('color-4')"></span>
+      <span class="color-5" onclick="setActivestyle('color-5')"></span>
+
+
+
+    </div>
+
+  </div>
+
+  <!--style switcher end-->
 
   <!-------------------about section end---------------->
 
@@ -193,7 +234,7 @@
             officia expedita harum!</p>
 
           <a href="cv.pdf" class=" btn1 outer-shadow hover-in-shadow  "> Download CV</a>
-          <a href="#" class=" btn1 outer-shadow hover-in-shadow  "> Hire Me</a>
+          <a href="#contact" class=" btn1 outer-shadow hover-in-shadow  "> Hire Me</a>
         </div>
       </div>
 
@@ -425,7 +466,7 @@
 
   <!-------------------services section start---------------->
 
-  <section class="service-section" id="services">
+  <section class="service-section section" id="services">
     <div class="container">
       <div class="row">
         <div class="section-title">
@@ -1002,6 +1043,12 @@
   </div>
 
   <!-------------------portfolio popup end---------------->
+
+
+ 
+
+
+
 
   <!-------------------testimonial section start---------------->
 

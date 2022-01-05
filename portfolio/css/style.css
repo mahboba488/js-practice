@@ -291,9 +291,10 @@ img{
 
 }
 
-.section.hide{
+.section .hide{
     display: none;
 }
+
 
 /*----------------header------------------------*/
 .header{

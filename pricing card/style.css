@@ -1,0 +1,247 @@
+body{
+    line-height: 1.5;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 1170px;
+    margin: auto;
+    
+}
+
+ul{
+    list-style: none;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pricing{
+    min-height: 100vh;
+    padding: 100px 0;
+    background-color: rgb(117, 99, 99);
+    --color-1:#5b58e8;
+    --color-2:#ffc600;
+    --color-3:#fc3c7f;
+    --color-4:#3fb73f;
+
+
+}
+
+.pricing .switch-table{
+
+    width: 100%;
+    padding: 0 15px;
+    text-align: center;
+    margin-bottom: 35px;
+
+}
+
+.pricing .switch-table .customer-switch{
+    height: 40px;
+    width: 100px;
+    background-color: var(--color-4);
+    border-radius: 30px;
+    vertical-align: middle;
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.pricing .switch-table .toggle-switch{
+    position: absolute;
+    z-index: -1;
+}
+.pricing .switch-table .customer-switch span{
+    display: inline-block;
+    height: 28px;
+    width: 28px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    transition: left 0.5s ease;
+}
+
+.pricing  .pricing-main.active .switch-table .customer-switch span{
+    left: calc(100% - 34px);
+}
+
+.pricing .switch-table div,
+.pricing .switch-table .customer-switch{
+    display: inline-block;
+}
+
+.pricing .switch-table .text-monthly,
+.pricing .switch-table .text-yearly{
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.pricing .pricing-main:not(.active) .switch-table .text-monthly,
+.pricing .pricing-main.active .switch-table .text-yearly
+
+{
+  color: var(--color-4);
+}
+
+
+
+.pricing .pricing-table{
+    background-color: #fff;
+    width: calc((100% / 3) - 30px);
+    margin: 0 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.pricing .pricing-table-header{
+    padding: 15px 30px;
+}
+
+.pricing .style-1 .pricing-table-body ul li i.fa-check,
+.pricing .style-1 .pricing-table-body ul li i.fa-times,
+.pricing .style-1 .pricing-table-footer a,
+.pricing  .style-1 .pricing-table-header{
+    background-color: var(--color-1);
+}
+.pricing .style-2 .pricing-table-body ul li i.fa-check,
+.pricing .style-2 .pricing-table-body ul li i.fa-times,
+.pricing .style-2 .pricing-table-footer a,
+.pricing  .style-2 .pricing-table-header{
+    background-color: var(--color-2);
+}
+.pricing .style-3 .pricing-table-body ul li i.fa-check,
+.pricing .style-3 .pricing-table-footer a,
+.pricing  .style-3 .pricing-table-header{
+    background-color: var(--color-3);
+}
+
+.pricing .pricing-table-header h3{
+    font-size: 30px;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 600;
+    text-align: center;
+}
+
+.pricing .pricing-table-price{
+    padding: 40px 0;
+    display: flex;
+  
+}
+.pricing .yearly-price,
+.pricing .monthly-price{
+    display: flex;
+    padding: 0 30px;
+    justify-content: center;
+    width: 100%;
+    flex-shrink: 0;
+    transition: all 0.5s ease;
+  
+}
+
+.pricing .pricing-main.active .yearly-price,
+.pricing .pricing-main.active .monthly-price{
+
+    transform: translateX(-100%);
+
+}
+
+.pricing .yearly-price{
+
+   
+
+}
+
+.pricing .monthly-price{
+
+ 
+
+}
+
+.pricing .pricing-table-price .currency{
+    font-size: 25px;
+    color: #555555;
+    font-weight: 700;
+    line-height: 1;
+
+}
+
+.pricing .pricing-table-price .amount{
+
+    font-size: 85px;
+    color: #555555;
+    font-weight: 700;
+    line-height: 0.8;
+    
+}
+
+.pricing .pricing-table-body{
+    padding: 0 30px;
+}
+
+.pricing .pricing-table-body ul li{
+    font-weight: 300;
+    color: #777777;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing .pricing-table-body ul li i{
+    display: flex;
+    height: 20px;
+    width: 20px;
+    background-color: #bbbbbb;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 13px;
+    position: absolute;
+    left: 0;
+    top:3px;
+}
+
+.pricing .pricing-table-body ul li:last-child{
+
+    margin-bottom: 0;
+
+}
+.pricing .pricing-table-footer{
+    padding: 30px;
+    text-align: center;
+}
+
+.pricing .pricing-table-footer a{
+
+    display: inline-block;
+    padding: 12px 35px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+
+}
+
+.pricing .pricing-table-footer a:hover{
+
+    box-shadow:0 0 15px rgba(0, 0, 0, 0.3);
+
+}

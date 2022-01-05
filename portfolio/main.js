@@ -37,13 +37,60 @@ document.addEventListener('click',(event)=>{
       if(event.target.hash !==""){
          event.preventDefault();
          const hash = event.target.hash;
+         
        //deactivate existing active 'section'
+  
        document.querySelector(".section.active").classList.add("hide");
        document.querySelector(".section.active").classList.remove("active");
+    
+    
+       //activate new section
 
-       //active new 'section'
        document.querySelector(hash).classList.add("active");
-       document.querySelector(hash).classList.remove('hide');
+       document.querySelector(hash).classList.remove("hide");
+
+       /* deactive existing active navigation menu 'link-item'*/
+
+       navMenu.querySelector(".active").classList.add("outer-shadow","hover-in-shadow");
+       navMenu.querySelector(".active").classList.remove("active","inner-shadow");
+
+       /*if clicked 'link-item' is contained withing the navigation menu */
+
+
+       if(navMenu.classList.contains("open")){
+
+         //activate new navigation menu 'link-item'
+
+   
+
+        event.target.classList.add("active","inner-shadow");
+       
+      
+        event.target.classList.remove("outer-shadow","hover-in-shadow");
+ 
+        //hide navigation menu
+ 
+        hideMenu();
+       }
+
+       else{
+          let navItems = navMenu.querySelectorAll(".link-item");
+
+          navItems.forEach((item) =>{
+             if(hash === item.hash){
+                //active new navigation menu 'link-item'
+
+                event.target.classList.add("active","inner-shadow");
+               event.target.classList.remove("outer-shadow","hover-in-shadow");
+             }
+          })
+
+          fadeOutEffect();
+
+       }
+
+       
+
       }
    }
 
